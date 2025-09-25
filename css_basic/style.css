@@ -1,0 +1,39 @@
+/* styles.css */
+
+/* Step 1: Make <body> a flex container in column layout */
+body {
+    display: flex;
+    flex-direction: column; /* header, main, footer stacked vertically */
+    min-height: 100vh; /* ensures full height */
+    margin: 0; /* remove default browser margin */
+}
+
+/* Step 2: Make <main> a flex container in row layout */
+main {
+    display: flex;
+    flex-direction: row; /* article and aside side by side */
+    flex: auto; /* allow it to grow and take remaining space */
+}
+
+/* Step 3: Define proportions of article and aside */
+article {
+    flex: 2; /* 2 parts (2/3 width) */
+    overflow-y: auto; /* scrollable if content is too tall */
+    padding: 1rem;
+    background: #fff;
+}
+
+aside {
+    flex: 1; /* 1 part (1/3 width) */
+    overflow-y: auto; /* scrollable if content is too tall */
+    padding: 1rem;
+    background: #f0f0f0;
+}
+
+/* Step 4: Optional styling for header/footer */
+header, footer {
+    padding: 1rem;
+    background: #1da1f2;
+    color: #fff;
+    text-align: center;
+}
