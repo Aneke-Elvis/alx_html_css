@@ -4,61 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic HTML</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Corrected: Only linking to styles.css, where all our work is stored -->
     <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="works_on_smartphone">
     <!-- header area-->
-    <div class="header_style">
-    <header>
-        <nav>
-        <ul>
-            <li><a href="index.html">Article</a></li>
-            <li><a href="tweets.html">Tweets</a></li>
-        </ul>
-        </nav>
-    </header>
-    </div>
+<header>
+    <!-- NOTE: I have kept your original logo path here, as you may have it locally -->
+    <a href="/css_advanced/images/logo.png" class="logo">
+      <img src="../css_advanced/images/logo.png" alt="logo">
+    </a>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tweets.html">Tweets</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
     
     <!-- main area-->
-    <div>
     <main>
         <article class="article_style">
     <h1>Forex Fundamentals</h1>
-    <p>I have spent hours debugging why checker not working on this file</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     
     <table>
         <thead>
+            <tr>
             <th>Name</th>
             <th>Age</th>
             <th>Counry</th>
+            </tr>
         </thead>
         <tbody>
+            <tr>
             <td>John</td>
             <td>25</td>
             <td>USA</td>
+            </tr>
         </tbody>
         <tbody>
+            <tr>
             <td>Emily</td>
             <td>28</td>
             <td>Canada</td>
+            </tr>
         </tbody>
         <tbody>
+            <tr>
             <td>Michael</td>
             <td>32</td>
             <td>Australia</td>
+            </tr>
         </tbody>
         <tbody>
+            <tr>
             <td>Sophia</td>
             <td>21</td>
             <td>Uk</td>
+            </tr>
         </tbody>
 
     </table>
         </article> 
-        <aside>placeholder to add comment thread later</aside>
+        <aside>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</aside>
     </main>
-    </div>
     <!--footer-->
     <footer>
         <p>Made by Aneke Elvis - <a href="https://github.com/Aneke-Elvis" target="_blank">here</a></p>

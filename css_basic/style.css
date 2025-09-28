@@ -1,18 +1,80 @@
-/* styles.css */
+/* ------------------------------------------------------------------ */
+/* CRITICAL FIX: Combining selectors and using !important for guaranteed zero margin */
+/* ------------------------------------------------------------------ */
+html, body {
+    margin: 0 !important; /* Forces margin to zero, overcoming external styles */
+    padding: 0 !important; /* Forces padding to zero */
+    height: 100%;
+    width: 100%;
+}
+
+/* ------------------------------------------------------------------ */
+/* UNIVERSAL RESET - Essential for edge-to-edge layout */
+/* ------------------------------------------------------------------ */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border don't add to element's width/height */
+}
 
 /* Step 1: Make <body> a flex container in column layout */
 body {
     display: flex;
     flex-direction: column; /* header, main, footer stacked vertically */
     min-height: 100vh; /* ensures full height */
-    margin: 0; /* remove default browser margin */
 }
+
+/* ------------------------------------------------------------------ */
+/* HEADER STYLING FIXES */
+/* ------------------------------------------------------------------ */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; /* Kept padding from header/footer rule */
+    background: #484f53;
+    color: #fff;
+}
+
+.logo {
+    /* Ensures the logo area takes up available space for alignment */
+    flex: 1; 
+    display: flex;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    /* Ensure the navigation container aligns itself to the right */
+    justify-content: flex-end; 
+    align-items: center;
+    /* Allow nav to take remaining horizontal space */
+    flex-grow: 1; 
+}
+
+/* FIX: Style the <ul> inside the nav for horizontal links */
+header nav ul {
+    display: flex;
+    list-style: none; /* Remove bullet points */
+    gap: 1rem; /* Spacing between links */
+}
+
+/* FIX: Style the <a> links */
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
 
 /* Step 2: Make <main> a flex container in row layout */
 main {
     display: flex;
-    flex-direction: row; /* article and aside side by side */
-    flex: auto; /* allow it to grow and take remaining space */
+    /* FIX: This ensures main fills ALL remaining vertical space */
+    flex-grow: 1; 
 }
 
 /* Step 3: Define proportions of article and aside */
@@ -30,10 +92,40 @@ aside {
     background: #f0f0f0;
 }
 
-/* Step 4: Optional styling for header/footer */
-header, footer {
+/* ------------------------------------------------------------------ */
+/* FOOTER STYLING */
+/* ------------------------------------------------------------------ */
+footer {
     padding: 1rem;
-    background: #1da1f2;
+    background: #484f53;
     color: #fff;
-    text-align: center;
+    /* Set footer text to the left */
+    text-align: left; 
+}
+
+/* ------------------------------------------------------------------ */
+/* NEW ADDITION: Table Styling */
+/* ------------------------------------------------------------------ */
+
+table {
+    /* Background and main border */
+    background-color: #f7f7f7; 
+    border-collapse: collapse; 
+    width: 100%;
+    margin-top: 1rem;
+    border: 1px solid #ccc; 
+}
+
+/* Border and padding for table cells */
+th, td {
+    border: 1px solid #ddd; 
+    padding: 8px;
+    text-align: left;
+}
+
+/* Style for the table header row */
+th {
+    background-color: #e9e9e9; 
+    color: #333;
+    font-weight: bold;
 }
