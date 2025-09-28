@@ -40,7 +40,7 @@ header {
 }
 
 .logo {
-    /* Ensures the logo area takes up available space for alignment */
+    /* positioning the logo */
     flex: 1; 
     display: flex;
     align-items: center;
@@ -55,7 +55,7 @@ header nav {
     flex-grow: 1; 
 }
 
-/* FIX: Style the <ul> inside the nav for horizontal links */
+/* Style the <ul> inside the nav for horizontal links */
 header nav ul {
     display: flex;
     list-style: none; /* Remove bullet points */
