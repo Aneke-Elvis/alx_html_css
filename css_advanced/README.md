@@ -3,7 +3,7 @@
 This project is a **responsive landing page** built with semantic HTML5 and modern CSS3.  
 It was designed based on a Figma file and follows the **HTML Advanced** and **CSS Advanced** project requirements.  
 
-🌐 **Live Demo:** [View Site Here](https://your-live-link.com)  
+🌐 **Live Demo:** [View Site Here](http://127.0.0.1:5500/css_advanced/index.html)  
 
 ---
 
