@@ -1,0 +1,321 @@
+/* --- General Body & Reset Styles --- */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Adjusted to a common sans-serif font */
+    margin: 0;
+    line-height: 1.6;
+    color: #333; /* Dark gray for general text */
+    background-image: url(./headphone_images/headphones_hero_1.jpg);
+}
+/* Base styles for all sections */
+section {
+    padding: 80px 20px; /* Generous padding top/bottom for sections */
+    text-align: center; /* Center content for sections by default */
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent for nav links by default */
+}
+
+/* --- Header Styles --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px; /* More padding for header */
+    background-color: transparent; /* Initially transparent for the banner background */
+    position: absolute; /* Position over the banner image */
+    width: calc(100% - 100px); /* Account for left/right padding */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure header is on top */
+}
+
+header .logo {
+    max-width: 150px; /* Adjust logo size */
+    height: auto;
+    
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px; /* Space between nav items */
+}
+
+header nav ul li a {
+    color: #fff; /* White color for nav links on the banner */
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ff6565; /* Hover effect similar to the button color */
+}
+/* --- Homepage Banner Section --- */
+#homepage-banner {
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 180px 20px 100px; /* More top padding to push content down */
+    min-height: 80vh; /* Make sure it takes up most of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Needed for any absolute positioning inside */
+}
+
+/* Add an overlay to darken the background image */
+#homepage-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 1; /* Below content but above background */
+}
+
+#homepage-banner .banner-content {
+    position: relative; /* Bring content above the overlay */
+    z-index: 2;
+    max-width: 900px; /* Limit width of all banner text for better readability */
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.banner-heading {
+    font-size: 3.5em; /* Large heading */
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.banner-subheading {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+.call-to-action-button {
+    background-color: #ff6565; /* Red color for button */
+    color: #fff;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 25px; /* Rounded button */
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    margin-bottom: 60px; /* Space below button */
+}
+
+.call-to-action-button:hover {
+    background-color: #e55a5a; /* Slightly darker red on hover */
+}
+
+.homepage-main-paragraph {
+    max-width: 700px; /* Limit width for main paragraph */
+    margin: 0 auto; /* Center the paragraph block */
+    font-size: 1em;
+    opacity: 0.8; /* Slightly less prominent */
+}
+
+/* --- General Section Headings & Paragraphs --- */
+.section-heading {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.section-paragraph {
+    max-width: 800px;
+    margin: 0 auto 60px; /* Center paragraph, add space below */
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* --- What We Do Section --- */
+#what-we-do {
+    background-color: #fff;
+    color: #333;
+    padding-top: 100px;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 40px; /* Space between feature items */
+    margin-top: 50px;
+}
+
+.feature-item {
+    flex: 1 1 200px; /* Allow items to grow/shrink, with a base width of 200px */
+    max-width: 250px; /* Maximum width for each item */
+    text-align: center;
+    padding: 20px;
+}
+
+.feature-item img {
+    width: 90px; /* Icon size */
+    height: 90px;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.feature-item p {
+    font-size: 0.95em;
+    color: #777;
+    margin: 0; /* Remove default paragraph margin */
+}
+
+/* --- Our Results Section --- */
+#our-results {
+    background-color: transparent; /* Dark background */
+    background-image: url(./headphone_images/headphones_hero_2.jpg); /* Background image for this section */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding-top: 100px;
+    position: relative;
+    /* Darken overlay for results section */
+}
+
+#our-results::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 1;
+}
+
+#our-results .section-heading,
+#our-results .section-paragraph,
+#our-results .results-grid {
+    position: relative; /* Bring content above the overlay */
+    z-index: 2;
+}
+
+#our-results .section-heading {
+    color: #fff; /* White heading on dark background */
+}
+
+#our-results .section-paragraph {
+    color: rgba(255, 255, 255, 0.8); /* Slightly transparent white paragraph */
+}
+
+.results-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px; /* Space between result items */
+    margin-top: 60px;
+}
+
+.percent-item {
+    text-align: center;
+    max-width: 200px;
+}
+
+.percent-shape {
+    width: 150px;
+    height: 150px;
+    background-color: #ff6565; /* Red pentagon background */
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* Create a pentagon shape */
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.percent-shape span {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.percent-item h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.percent-item p {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+/* --- Contact Us Section --- */
+#contact-us {
+    background-color: #fff;
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+#registration-form {
+    max-width: 400px; /* Limit form width */
+    margin: 0 auto;
+    text-align: left; /* Align form labels/inputs to the left within the form */
+    padding-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block; /* Make labels appear above inputs */
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-bottom: 1px solid #ccc; /* Underline style for inputs */
+    font-size: 1.1em;
+    background-color: transparent; /* Transparent background for inputs */
+    outline: none; /* Remove outline on focus */
+}
+
+.form-group input:focus {
+    border-bottom-color: #ff6565; /* Highlight on focus */
+}
+
+#registration-form .call-to-action-button {
+    width: 100%; /* Make button full width of the form */
+    margin-top: 30px;
+    padding: 15px 0; /* Adjust padding for full width button */
+}
+
+/* When menu is active, animate hamburger into an 'X' */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
