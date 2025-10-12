@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="1-styles.css">
+    <title>Headphones</title>
+</head>
+<body>
+     <header>
+    <img src="./headphone_images/logo_headphones.png" alt="logo" class="logo">
+
+    <nav id="navbar">
+        <ul>
+            <li><a href="#what-we-do">What we do</a></li>
+            <li><a href="#our-results">Our results</a></li>
+            <li><a href="#contact-us">Contact us</a></li>
+        </ul>
+    </nav>
+    </header>
+
+     <main>
+        <section id="homepage-banner">
+            <div class="banner-content">
+                <h1 class="banner-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+                <p class="banner-subheading">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button type="button" class="call-to-action-button">CALL TO ACTION</button>
+                <p class="homepage-main-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </section>
+        <section id="what-we-do">
+            <h2 class="section-heading">What we do</h2>
+            <p class="section-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <div class="features-grid">
+                <article class="feature-item">
+                    <img src="./headphone_images/sound-waves-png.png" alt="recording logo">
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                </article>
+                <article class="feature-item">
+                    <img src="./headphone_images/movie-849.png" alt="video logo">
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                </article>
+                <article class="feature-item">
+                    <img src="./headphone_images/Note red.png" alt="audio logo">
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                </article>
+                <article class="feature-item">
+                    <img src="./headphone_images/ear  (1).png" alt="listening logo">
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                </article>
+            </div>
+        </section>
+
+     <!--js hamburger n=menu-->   
+    <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('navbar');
+
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>
