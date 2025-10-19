@@ -262,6 +262,93 @@ header nav ul li a:hover {
     margin: 0;
 }
 
+/* --- Contact Us Section --- */
+#contact-us {
+    background-color: #fff;
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+#registration-form {
+    max-width: 400px; /* Limit form width */
+    margin: 0 auto;
+    text-align: left; /* Align form labels/inputs to the left within the form */
+    padding-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block; /* Make labels appear above inputs */
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-bottom: 1px solid #ccc; /* Underline style for inputs */
+    font-size: 1.1em;
+    background-color: transparent; /* Transparent background for inputs */
+    outline: none; /* Remove outline on focus */
+}
+
+.form-group input:focus {
+    border-bottom-color: #ff6565; /* Highlight on focus */
+}
+
+#registration-form .call-to-action-button {
+    width: 100%; /* Make button full width of the form */
+    margin-top: 30px;
+    padding: 15px 0; /* Adjust padding for full width button */
+}
+/* --- Footer Styles --- */
+footer {
+    background-color: #1a1a1a; /* Dark background for footer */
+    color: #fff;
+    padding: 40px 50px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Limit footer content width */
+    margin: 0 auto;
+    margin-bottom: 30px; /* Space between main footer content and copyright */
+}
+
+footer .logo {
+    max-width: 150px;
+    height: auto;
+}
+
+.social-links img {
+    width: 30px; /* Size of social icons */
+    height: 30px;
+    margin: 0 10px;
+    filter: brightness(0) invert(1); /* Make social icons white */
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.copyright {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 20px;
+}
+
+
+
 /* When menu is active, animate hamburger into an 'X' */
 .menu-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
